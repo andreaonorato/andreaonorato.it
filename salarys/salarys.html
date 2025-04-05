@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salarys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body style="font-family: 'Quicksand', sans-serif;">
+    <div id="loading-screen">
+        <img src="img/logo.png" alt="Salarys Logo" class="loading-logo">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    
+
+    <h1 style="text-align: center;">Software Engineer Salary Analysis in Europe</h1>
+<p>This study explores <b>software engineer salaries</b>, <b>tax implications</b>, and <b>savings potential</b> across Europe, helping professionals make informed career and relocation decisions.</p>
+<p>This study has been carried out by <strong>Andrea Onorato</strong>. Connect on <a href="https://www.linkedin.com/in/andrea-onorato-3b1664245/" target="_blank">LinkedIn</a> or visit <a href="https://andreaonorato.it" target="_blank">my website</a>.</p>
+
+<h2 id="how-was-the-study-conducted" style="text-align: center;">How was the study conducted?</h2>
+<p>The salaries have been extracted from <a href="https://www.glassdoor.com"><b>Glassdoor</b></a> through <b>web scraping</b>. The data was then processed, <b>normalized to EUR</b>, and cleaned by removing incorrect salary entries based on a specific algorithm.</p>
+<p>For the tax analysis, <b>official tax calculators</b> from trusted government websites and other reliable sources were used to compute the <b>gross-to-net salary</b> for a <i>35-year-old, medium-frugal individual</i>, working the standard weekly hours in their country, unmarried, childless, and without religious obligations.</p>
+<p>To estimate the <b>savings rate</b>, cost of living data was sourced from <a href="https://www.numbeo.com"><b>Numbeo</b></a>.</p>
+
+
+<h2 style="text-align: center;">Contents</h2>
+<ul style="text-align: center;">
+    <li><a href="#study-methodology">How was the study conducted?</a></li>
+    <li><a href="#results">Results</a>
+        <ul>
+            <li><a href="#highest-earning">💰 What to do if you aim to earn the most money?</a></li>
+            <li><a href="#no-remote">🏢 What if you do not want to work remotely?</a></li>
+            <li><a href="#ppi-vs-savings">📈 PPI vs. Savings Rate?</a></li>
+            <li><a href="#work-life-balance">⚖️ What if you really aim for the best work-life balance?</a></li>
+            <li><a href="#tax-impact">💸 Does tax burden significantly affect savings?</a></li>
+            <li><a href="#job-opportunities">📊 Do salaries correlate with job opportunities?</a></li>
+            <li><a href="#emerging-markets">🌍 Which emerging countries offer the best tech salary growth potential?</a></li>
+        </ul>
+    </li>
+    <li><a href="#interactive-maps">Interactive Maps</a></li>
+    <li><a href="#salary-analysis">Salary Analysis</a></li>
+    <li><a href="#taxation-savings">Taxation and Saving Rate</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#future-work">Future Work</a></li>
+</ul>
+
+
+<h1 id="results" style="text-align: center;">Results (full analysis is below)</h1>
+
+<h2 id="highest-earning">💰 What to do if you aim to earn the most money?</h2>
+<p>Move to a <b>Low Cost Of Living (LCOL)</b> country with <b>low taxes</b>, such as <b>Poland or Portugal</b>, and work for a company based in <b>Switzerland or the USA</b>.</p>
+
+<h2 id="no-remote">🏢 What if you do not want to work remotely?</h2>
+<p>Move to either <b>Switzerland</b> or <b>Poland</b>. These countries offer the <b>highest Purchasing Power Index (PPI)</b>. Try to secure a job in <b>big tech</b> or <b>finance</b> for the best pay. If top-tier companies are out of reach, consider medium-sized firms in <b>Denmark</b> and the <b>UK</b>.</p>
+
+<h2 id="ppi-vs-savings">📈 PPI vs. Savings Rate?</h2>
+<p>It depends on your goals. If you plan to settle permanently (e.g., <i>buying a house, starting a family</i>), you should prioritize a <b>high-PPI country</b>. However, if you prefer flexibility, focusing on a <b>high-savings-rate country</b> is a smarter choice.</p>
+
+<h2 id="work-life-balance">⚖️ What if you really aim for the best work-life balance?</h2>
+<p>Countries like <b>Switzerland</b> and the <b>UK</b> offer high salaries but often demand <i>long working hours</i>. In contrast, countries like <b>Denmark</b> and the <b>Netherlands</b> provide a strong balance between <b>salary and work-life harmony</b>.</p>
+
+<h2 id="tax-impact">💸 Does tax burden significantly affect savings?</h2>
+<p><b>Yes.</b> Tax rates vary widely across Europe, significantly impacting your <b>net salary</b> and savings. Countries like <b>Switzerland, Ireland, and Poland</b> have <i>relatively lower tax burdens</i>, whereas nations like <b>France</b> or <b>Belgium</b> impose much higher taxes. Relocating strategically based on tax policies can <b>greatly enhance disposable income</b>.</p>
+
+<h2 id="job-opportunities">📊 Do salaries correlate with job opportunities?</h2>
+<p>Not always. Countries offering the <b>highest salaries</b>, such as <b>Switzerland</b>, often have <i>stricter immigration laws</i> and <i>fewer job openings</i> for non-residents. In contrast, countries like <b>Germany</b> and the <b>Netherlands</b> have <i>more job opportunities</i> due to their large economies and international hiring policies.</p>
+
+<h2 id="emerging-markets">🌍 Which emerging countries offer the best tech salary growth potential?</h2>
+
+<p><b>Poland and Portugal.</b> In Poland in the past years salaries have been growing so fast and many global companies outsource here, plus a growing startup ecosystem is booming. Salary increases will continue due to <b>EU investments</b> and nearshoring.
+Portugal is increasing number of tech hubs (Lisbon, Porto) attractive for digital nomands and startups. Plus nice government tax incentives for expats.</p>
+
+
+<h2 id="interactive-maps">Here an interactive map for the median gross salaries</h2>
+    <p> Hover over a country to see more details for the country.</p>
+    <div class="plot-container">
+        <iframe src="maps/europe_salary_map_gross_median.html" height="600"></iframe>
+    </div>
+
+    <h2> Saving rates for median salaries </h2>
+    <div class="plot-container">
+        <iframe src="maps/europe_salary_map_saving_median.html" height="600"></iframe>
+    </div>
+
+    <h2> Top 10% companies gross salaries wise </h2>
+    <div class="plot-container">
+        <iframe src="maps/europe_salary_map_gross_top10.html" height="600"></iframe>
+    </div>
+
+    <h2> Saving rates for the top 10% companies salary wise </h2>
+    <div class="plot-container">
+        <iframe src="maps/europe_salary_map_saving_top10.html" height="600"></iframe>
+    </div>
+
+
+    <h1 id="salary-analysis" style="text-align: center;">Salary Analysis</h1>
+
+    <h2>1. Gross Salary Distribution Across Countries</h2>
+    <p>This boxplot shows the distribution of salaries for each country. The spread indicates salary variations and potential outliers.</p>
+    <div class="plot-container">
+        <img src="img/salary-distribution-per-country.png"></img>
+    </div>
+
+    <h2>2. Median Gross Salary by Country</h2>
+    <p>This bar chart presents the median gross salary in each country.</p>
+    <div class="plot-container">
+        <img src="img/median-gross-salary-by-country.png"></img>
+    </div>
+
+    <h2>3. Gross Salary Percentiles</h2>
+    <p>This heatmap provides gross salary percentiles (25th, 50th, 75th, 90th) to understand salary distribution in each country.</p>
+    <div class="plot-container">
+        <img src="img/salary-percentiles-per-country.png"></img>
+    </div>
+
+    <h2>4. Show salary variation across countries for top companies</h2>
+    <p>This barchart shows how these 5 companies pays in each different country.</p>
+    <div class="plot-container">
+        <img src="img/salary-differences-by-company-across-countries.png"></img>
+    </div>
+
+    <h2>5. Show salary standard deviation across countries</h2>
+    <p>A measure of salary variability within each country. A high standard deviation indicates a greater disparity between the lowest and highest salaries. High standard deviation means that there are many outliers, i.e. many companies that pays a lot more/less than the average. Low standard deviation means that salaries are quite fixed, no much room for super high or super low salaries</p>
+    <div class="plot-container">
+        <img src="img/salary-standard-deviation-by-country.png"></img>
+    </div>
+
+    <h1 id="taxation-savings" style="text-align: center;">Taxation and Saving Rate</h1>
+
+    <p> In this section I wanted to see also the top 10% salary (90th percentile salary) which rapresent the top 10% companies salary wise for each country which are usually big-tech (FAANG) and trading companies. It will be compared to the median salary.</p>
+
+    <h2>1. Tax percentage by country</h2>
+    <p>This barchart shows the tax percentage for the median and the top 10% salary (90th percentile salary) across different countries </p>
+    <div class="plot-container">
+        <img src="img/tax-percentage-by-country.png"></img>
+    </div>
+
+    <h2>2. Gross vs Net salary comparison for median salary</h2>
+    <p>This barchart shows the gross and net salary regarding median salary for each country </p>
+    <div class="plot-container">
+        <img src="img/gross-to-net-salary-median-salary.png"></img>
+    </div>
+
+    <h2>3. Gross vs Net salary comparison for top 10% salary (90th percentile salary)</h2>
+    <p>This barchart shows the gross and net salary regarding top 10% salary for each country </p>
+    <div class="plot-container">
+        <img src="img/gross-to-net-salary-top10-salary.png"></img>
+    </div>
+
+    <h2>4. Cost of living by country</h2>
+    <p>This barchart shows the estimated cost of living of each country </p>
+    <div class="plot-container">
+        <img src="img/cost-of-living-by-country.png"></img>
+    </div>
+
+    <h2>5. Yearly Savings for median salary per country</h2>
+    <p>This bar chart illustrates how much median earner software engineers save per year in different countries.</p>
+    <div class="plot-container">
+        <img src="img/yearly-savings-median-salary.png"></img>
+    </div>
+
+    <h2>6. Yearly Savings for top 10% salary per country</h2>
+    <p>This bar chart illustrates how much top 10% earner software engineers save per year in different countries.</p>
+    <div class="plot-container">
+        <img src="img/yearly-savings-top10-salary.png"></img>
+    </div>
+
+    <h2>7. Purchasing power index (PPI) for median salary </h2>
+    <p>This visualization presents the PPI for median salary for each country.</p>
+    <div class="plot-container">
+        <img src="img/PPI-median-salary.png"></img>
+    </div>
+
+    <h2>8. Purchasing power index (PPI) for top 10% salary </h2>
+    <p>This visualization presents the PPI for top 10% salary for each country.</p>
+    <div class="plot-container">
+        <img src="img/PPI-top10-salary.png"></img>
+    </div>
+
+    <h1 id="limitations" style="text-align: center;">Limitations</h1>
+    <p>While <b>Glassdoor</b> provides valuable salary insights, it is not a <i>perfect</i> data source. The dataset includes <i>historical salaries</i> from when Glassdoor was first established, meaning <b>older salaries</b> are still present, potentially skewing results.</p>
+    <p><b>Tax calculations</b> are highly complex and depend on numerous personal factors such as <i>marital status, dependents, additional income sources, and deductions</i>. This study assumes a <b><i>35-year-old unmarried male</i></b>, which may not be representative of all individuals.</p>
+    <p><b>Cost of living</b> is another variable that can significantly impact savings. Here, a <i>medium-frugal lifestyle</i> was assumed, but <b>individual spending habits</b> vary widely. The results could change substantially if a <i>different lifestyle</i> were considered.</p>
+
+    <h1 id="future-work" style="text-align: center;">Future Work</h1>
+    <p>To improve accuracy, acquiring <b>more up-to-date</b> and <b>granular salary data</b> from multiple sources beyond <i>Glassdoor</i> could help refine the analysis.</p>
+    <p>Further research could incorporate a <b>more dynamic taxation model</b> that adjusts for <i>different personal and financial circumstances</i>, making tax estimates more precise.</p>
+    <p>It would also be interesting to explore the <b>impact of different lifestyle choices</b> on savings and financial well-being. A <i>sensitivity analysis</i> varying <b>cost of living assumptions</b> could provide deeper insights into how <b>lifestyle affects purchasing power</b> and <b>net savings</b> in different countries.</p>
+
+    <footer>
+        <p>&copy; 2025 Salarys. All rights reserved.</p>
+    </footer>
+      
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+    <script>
+        window.onload = function() {
+            document.getElementById("loading-screen").style.display = "none";
+        };
+    </script>
+    
+    
+</body>
+</html>
